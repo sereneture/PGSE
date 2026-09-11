@@ -1,27 +1,26 @@
 # PGSE: Primitive-Growing Symbolic Evolution for Autonomous Swarm Controllers
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Status: Under Review](https://img.shields.io/badge/Status-Under%20Review%20(IEEE%20TAI)-orange.svg)](https://tai.ieee.org/)
-[![Platform](https://img.shields.io/badge/Platform-Swarm%20Control-blue.svg)](#-synchronized-swarm-behaviors-overview)
-[![Python](https://img.shields.io/badge/Python-3.10%2B-green.svg)](https://www.python.org/)
+[![Status: Under Review](https://img.shields.io/badge/Status-Under%20Review-orange.svg)]()
+[![Platform: Swarm Control](https://img.shields.io/badge/Domain-UAV%20Swarm%20Control-brightgreen.svg)]()
 
 Official project showcase and rollout trajectory animations for:
 
-> **PGSE: Primitive-Growing Symbolic Evolution for Autonomous Swarm Controllers**  
-> *Submitted to IEEE Transactions on Artificial Intelligence (IEEE TAI)*  
+> **Primitive-Growing Symbolic Evolution for Autonomous Swarm Controllers**  
+> *Under Review at IEEE Transactions on Artificial Intelligence (IEEE TAI)*  
 > *Authors: Wang Chen (王琛) et al.*
 
 ---
 
 ## 🌟 Research Highlights
 
-- **Primitive-Growing Symbolic Evolution (PGSE)**: An autonomous closed-loop search framework that synthesizes, audits, and admits high-order geometric and topological primitives directly into typed symbolic controller trees to bridge representation gaps.
+- **Primitive-Growing Symbolic Evolution (PGSE)**: An autonomous closed-loop search framework that synthesizes, audits, and admits high-order geometric and topological primitives directly into typed symbolic controller trees to bridge representation gaps caused by sensor lesion or grammar incompleteness.
 - **Strictly Controlled Benchmark Swarm Tasks**:
-  - `QUEUE`: Autonomous in-trail line formation cruising and inter-agent spacing control.
-  - `ENTRAP`: Multi-UAV target entrapment and circumscription with hard collision avoidance.
-  - `VORTEX`: Self-centered counter-rotating orbital mill formation with high angular momentum.
+  - `QUEUE`: Autonomous in-trail line formation cruising and inter-agent spacing control without external target anchors.
+  - `ENTRAP`: Multi-UAV target encirclement and pursuit of an agile maneuvering target with hard collision avoidance.
+  - `VORTEX`: Self-centered counter-rotating orbital mill formation with high collective angular momentum.
   - `PACKING`: Self-assembly of dense hexagonal/triangular crystal lattice under strict spatial interaction cutoffs.
-  - `CHAIN`: Multi-hop dynamic wireless communication relay maintaining continuous connectivity between maneuvering endpoints.
+  - `CHAIN`: Multi-hop dynamic wireless communication relay maintaining continuous connectivity between maneuvering ground endpoints.
 - **Circuit-Aware AST Projection**: Translates AST consumption contexts into actionable sensor DSL specifications, bridging high-level semantic reasoning with micro-level execution guarantees.
 - **Interpretable White-Box Policies**: Evolved controllers execute as closed-form arithmetic trees with zero neural network inference latency and deterministic microsecond control cycles.
 
@@ -29,15 +28,15 @@ Official project showcase and rollout trajectory animations for:
 
 ## 🎬 Swarm Scene Rollouts (5 Benchmark Tasks)
 
-The table below showcases the closed-loop rollouts of champion controllers discovered by PGSE across **5 canonical swarm tasks**, evaluated under full quadrotor physical dynamics:
+The table below showcases the closed-loop rollouts of champion controllers discovered by PGSE across **5 canonical swarm tasks**, evaluated under full 13-state quadrotor physical dynamics:
 
 | Task / Scenario | Rollout Animation (Nominal Setting) | Emergent Phenomenon & Formation Property |
 | :--- | :---: | :--- |
-| **Task 1: QUEUE**<br>*(Autonomous Linear Queue)* | <img src="animations/task_queue.gif" width="300"/><br>**`task_queue.gif`** | Autonomous in-trail line formation without external target anchor; uniform inter-agent spacing via local centroid attraction ($\operatorname{mean}_{j \in \mathcal{N}_i(8)} \Delta \mathbf{p}_{ij}$). |
-| **Task 2: ENTRAP**<br>*(Dynamic Target Encirclement)* | <img src="animations/task_entrap.gif" width="300"/><br>**`task_entrap.gif`** | Swarm agents surround, track, and stably encircle an evasive moving target (red star) via self-assembled protective radial spring potentials. |
-| **Task 3: VORTEX**<br>*(Dual Counter-Rotating Mill)* | <img src="animations/task_vortex.gif" width="300"/><br>**`task_vortex.gif`** | Self-organized dual-lobe counter-rotating swirling orbits emerge from pure local peer-to-peer relative observations without global reference frames. |
-| **Task 4: PACKING**<br>*(Hexagonal Lattice Crystal)* | <img src="animations/task_packing.gif" width="300"/><br>**`task_packing.gif`** | Dense triangular crystal self-assembly; dynamically adapts spatial interaction cutoffs to $4.6\,\text{m}$ to accommodate triangular lattice geometry. |
-| **Task 5: CHAIN**<br>*(Dynamic Communication Relay)* | <img src="animations/task_comm_relay.gif" width="300"/><br>**`task_comm_relay.gif`** | Forms and maintains an end-to-end multi-hop communication corridor between two maneuvering endpoints under strict local radio visibility ($R = 15\,\text{m}$). |
+| **Task 1: QUEUE**<br>*(Autonomous Linear Queue)* | <img src="animations/task_queue.gif" width="280"/><br>**`task_queue.gif`** | Autonomous in-trail line formation cruising; uniform inter-agent spacing sustained via local centroid attraction ($\operatorname{mean}_{j \in \mathcal{N}_i(8)} \Delta \mathbf{p}_{ij}$). |
+| **Task 2: ENTRAP**<br>*(Dynamic Target Encirclement)* | <img src="animations/task_entrap.gif" width="280"/><br>**`task_entrap.gif`** | Swarm agents surround, track, and stably encircle an evasive moving target (red star) via self-assembled protective radial spring potentials. |
+| **Task 3: VORTEX**<br>*(Dual Counter-Rotating Mill)* | <img src="animations/task_vortex.gif" width="280"/><br>**`task_vortex.gif`** | Self-organized dual-lobe counter-rotating swirling orbits emerge from pure local peer-to-peer relative observations without global reference frames. |
+| **Task 4: PACKING**<br>*(Hexagonal Lattice Crystal)* | <img src="animations/task_packing.gif" width="280"/><br>**`task_packing.gif`** | Dense triangular crystal self-assembly; dynamically adapts spatial interaction cutoffs to $4.6\,\text{m}$ to accommodate dense lattice geometry. |
+| **Task 5: CHAIN**<br>*(Dynamic Communication Relay)* | <img src="animations/task_comm_relay.gif" width="280"/><br>**`task_comm_relay.gif`** | Forms and maintains an end-to-end multi-hop communication corridor between two maneuvering endpoints under strict local radio visibility ($R = 15\,\text{m}$). |
 
 ---
 
@@ -66,19 +65,27 @@ Demonstrating the transferability and resilience of evolved symbolic primitives 
 
 ---
 
-## 📊 Benchmark Results
+## 📋 Task Details & Lesion Recovery Properties
 
-Aggregated statistics across $5 \text{ tasks} \times 4 \text{ methods} \times 10 \text{ seeds} = 200$ independent trials under identical candidate budgets ($B_{\text{cand}}=18$):
+### 1. QUEUE (`task_queue.gif` / `queue_evolution_replay.gif`)
+- **Objective**: Swarm agents establish and preserve a coherent horizontal line queue while navigating in-trail with uniform spacing.
+- **Lesion Recovery**: Synthesizes an $8\,\text{m}$ local centroid attractive field ($\operatorname{mean}_{j \in \mathcal{N}_i(8)} \Delta \mathbf{p}_{ij}$), achieving $133.2\%$ relative performance recovery after deprivation of nearest-neighbor distance and Laplacian terms.
 
-| Task | Lesioned Primitives | Intact Baseline | Lesion Baseline | STGP-DSL | **Full PGSE (Ours)** | Relative Recovery |
-| :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| **QUEUE** | $w / y$ (Distance / Laplacian) | 0.7571 | 0.6593 | 0.7898 | **0.8206 $\pm$ 0.0557** | **133.2%** |
-| **ENTRAP** | $b / B$ (Neighbor Spring) | 0.8124 | 0.5218 | 0.7410 | **0.8645 $\pm$ 0.0271** | **118.2%** |
-| **VORTEX** | $b / B$ (Neighbor Spring) | 0.7620 | 0.4891 | 0.6830 | **0.8140 $\pm$ 0.0210** | **119.3%** |
-| **PACKING** | $b / B$ (Neighbor Spring) | 0.7205 | 0.4395 | 0.5100 | **0.6125 $\pm$ 0.1075** | **61.6%** |
-| **COMM_RELAY**| $7 / 8$ (Neighbor Mean Vel) | 0.7890 | 0.4120 | 0.7250 | **0.8320 $\pm$ 0.0315** | **111.4%** |
+### 2. ENTRAP (`task_entrap.gif` / `entrap_evolution_replay.gif`)
+- **Objective**: Agents surround, track, and stably encircle an evasive maneuvering target while maintaining safety standoff distances and inter-agent collision avoidance.
+- **Lesion Recovery**: Self-assembles protective radial spring potentials with bounded zero-distance denominators, restoring encirclement stability ($118.2\%$ recovery).
 
-*Detailed per-seed evidence manifests and audit logs are archived in [`results_summary/`](results_summary/).*
+### 3. VORTEX (`task_vortex.gif`)
+- **Objective**: Establish and sustain a self-centered orbital mill formation with high collective angular momentum around an unanchored virtual centroid.
+- **Lesion Recovery**: Generates counter-rotational shear flows through non-linear angular momentum couplings ($119.3\%$ recovery).
+
+### 4. PACKING (`task_packing.gif` / `packing_hexatic_growth_simulation.gif`)
+- **Objective**: Self-assemble into a close-packed triangular lattice crystal structure with uniform nearest-neighbor coordination.
+- **Lesion Recovery**: Dynamically adapts spatial cutoff distances to $4.6\,\text{m}$ to match crystal geometry, restoring hexatic orientational order.
+
+### 5. CHAIN (`task_comm_relay.gif` / `comm_relay_evolution_replay.gif`)
+- **Objective**: Form and maintain a multi-hop dynamic relay network between two arbitrarily moving ground endpoints under a strict local radio communication radius ($R = 15\,\text{m}$).
+- **Lesion Recovery**: Reconstructs algebraic neighbor velocity consensus ($\mathbf{v}_i + \operatorname{mean}_j(\mathbf{v}_j - \mathbf{v}_i) = \operatorname{mean}_j \mathbf{v}_j$) with exact structural equivalence ($111.4\%$ recovery).
 
 ---
 
@@ -89,8 +96,6 @@ Aggregated statistics across $5 \text{ tasks} \times 4 \text{ methods} \times 10
 ---
 
 ## 📜 Citation
-
-If you find this work or benchmark helpful in your research, please cite:
 
 ```bibtex
 @article{wang2026pgse,
