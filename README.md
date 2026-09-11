@@ -52,26 +52,13 @@ Synchronized 1×5 multi-panel presentation across all five canonical tasks opera
 
 ---
 
-## 📈 High-Density Swarm Evolution Replays (N=15)
-
-Demonstrating the transferability and resilience of evolved symbolic primitives when deployed to larger swarms ($N=15$ quadrotors):
-
-| Swarm Task | Large-Scale Rollout Replay ($N=15$) | Scale Transfer & Emergent Behavior |
-| :--- | :---: | :--- |
-| **QUEUE (N=15)** | <img src="animations/queue_evolution_replay.gif" width="280"/> | 15 quadrotors autonomously maintain extended linear formation in-trail corridor. |
-| **ENTRAP (N=15)** | <img src="animations/entrap_evolution_replay.gif" width="280"/> | High-density multi-agent circumscription with equidistant radial perimeter distribution. |
-| **PACKING (N=15)** | <img src="animations/packing_hexatic_growth_simulation.gif" width="280"/> | Self-assembly demonstrating hexatic orientational order phase transition and crystal growth. |
-| **CHAIN (N=15)** | <img src="animations/comm_relay_evolution_replay.gif" width="280"/> | Dynamic relay chain maintaining continuous connectivity under endpoint perturbation. |
-
----
-
 ## 📋 Task Details & Lesion Recovery Properties
 
-### 1. QUEUE (`task_queue.gif` / `queue_evolution_replay.gif`)
+### 1. QUEUE (`task_queue.gif`)
 - **Objective**: Swarm agents establish and preserve a coherent horizontal line queue while navigating in-trail with uniform spacing.
 - **Lesion Recovery**: Synthesizes an $8\,\text{m}$ local centroid attractive field ($\operatorname{mean}_{j \in \mathcal{N}_i(8)} \Delta \mathbf{p}_{ij}$), achieving $133.2\%$ relative performance recovery after deprivation of nearest-neighbor distance and Laplacian terms.
 
-### 2. ENTRAP (`task_entrap.gif` / `entrap_evolution_replay.gif`)
+### 2. ENTRAP (`task_entrap.gif`)
 - **Objective**: Agents surround, track, and stably encircle an evasive maneuvering target while maintaining safety standoff distances and inter-agent collision avoidance.
 - **Lesion Recovery**: Self-assembles protective radial spring potentials with bounded zero-distance denominators, restoring encirclement stability ($118.2\%$ recovery).
 
@@ -79,11 +66,11 @@ Demonstrating the transferability and resilience of evolved symbolic primitives 
 - **Objective**: Establish and sustain a self-centered orbital mill formation with high collective angular momentum around an unanchored virtual centroid.
 - **Lesion Recovery**: Generates counter-rotational shear flows through non-linear angular momentum couplings ($119.3\%$ recovery).
 
-### 4. PACKING (`task_packing.gif` / `packing_hexatic_growth_simulation.gif`)
+### 4. PACKING (`task_packing.gif`)
 - **Objective**: Self-assemble into a close-packed triangular lattice crystal structure with uniform nearest-neighbor coordination.
 - **Lesion Recovery**: Dynamically adapts spatial cutoff distances to $4.6\,\text{m}$ to match crystal geometry, restoring hexatic orientational order.
 
-### 5. CHAIN (`task_comm_relay.gif` / `comm_relay_evolution_replay.gif`)
+### 5. CHAIN (`task_comm_relay.gif`)
 - **Objective**: Form and maintain a multi-hop dynamic relay network between two arbitrarily moving ground endpoints under a strict local radio communication radius ($R = 15\,\text{m}$).
 - **Lesion Recovery**: Reconstructs algebraic neighbor velocity consensus ($\mathbf{v}_i + \operatorname{mean}_j(\mathbf{v}_j - \mathbf{v}_i) = \operatorname{mean}_j \mathbf{v}_j$) with exact structural equivalence ($111.4\%$ recovery).
 

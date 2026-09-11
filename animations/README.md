@@ -1,6 +1,6 @@
 # PGSE: Swarm Trajectory Animations & Visualizations
 
-This directory contains high-resolution animated demonstrations and evolution replays generated from deterministic rollouts of discovered symbolic controllers.
+This directory contains high-resolution animated demonstrations generated from deterministic rollouts of discovered symbolic controllers.
 
 ---
 
@@ -27,16 +27,6 @@ This directory contains high-resolution animated demonstrations and evolution re
 - **`task_comm_relay.gif`** (520 × 520 px, 75 frames, ~703 KB):
   6-UAV dynamic multi-hop communication relay between moving terminal nodes.
 
-### 3. High-Density Swarm Evolution Replays
-- **`queue_evolution_replay.gif`** (816 × 816 px, ~1.49 MB):
-  15-UAV large-scale linear queue formation rollout.
-- **`entrap_evolution_replay.gif`** (816 × 816 px, ~1.69 MB):
-  15-UAV large-scale circular entrapment rollout.
-- **`packing_hexatic_growth_simulation.gif`** (816 × 816 px, ~2.32 MB):
-  High-density hexatic order phase transition and crystal growth.
-- **`comm_relay_evolution_replay.gif`** (816 × 816 px, ~1.74 MB):
-  Dynamic communication chain adaptation under endpoint trajectory perturbation.
-
-### 4. Static Composite Vector Figure
+### 3. Static Composite Vector Figure
 - **`fig_task_trajectories.png`**:
   High-resolution (300 DPI) publication-quality trajectory plot matching Figure 1 in the IEEE TAI manuscript.
