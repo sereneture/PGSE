@@ -73,7 +73,7 @@ The table below provides a comprehensive side-by-side visual comparison of champ
 
 | Benchmark Task | Scenario 1: Nominal ($N=6\sim 12$) | Scenario 2: Scaled ($N=15$) | Scenario 3: Ultra-Dense ($N=25$) | Emergent Physical Mechanism & Scale Invariance |
 | :--- | :---: | :---: | :---: | :--- |
-| **Task 1: QUEUE**<br>*(Linear Queue Cruising)* | <img src="animations/task_queue.gif" width="220"/><br><code>task_queue.gif</code><br>($N=6$) | <img src="animations/scale15/task_queue_n15.gif" width="220"/><br><code>task_queue_n15.gif</code><br>($N=15$) | <img src="animations/scale25/task_queue_n25.gif" width="220"/><br><code>task_queue_n25.gif</code><br>($N=25$) | **Uniform In-Trail Spacing**:<br>Local centroid attraction ($\operatorname{mean}_{j \in \mathcal{N}_i(8)} \Delta \mathbf{p}_{ij}$) sustains constant safety headway ($3.5\sim 3.6\,\text{m}$) regardless of swarm length. Zero collisions across all scales. |
+| **Task 1: QUEUE**<br>*(Linear Queue Cruising)* | <img src="animations/task_queue.gif" width="220"/><br><code>task_queue.gif</code><br>($N=6$) | <img src="animations/scale15/task_queue_n15.gif" width="220"/><br><code>task_queue_n15.gif</code><br>($N=15$) | <img src="animations/scale25/task_queue_n25.gif" width="220"/><br><code>task_queue_n25.gif</code><br>($N=25$) | **Uniform In-Trail Spacing**:<br>Local centroid attraction ($\mathrm{mean}_{j \in \mathcal{N}_i(8)} \Delta \mathbf{p}_{ij}$) sustains constant safety headway ($3.5\sim 3.6\,\text{m}$) regardless of swarm length. Zero collisions across all scales. |
 | **Task 2: ENTRAP**<br>*(Target Encirclement)* | <img src="animations/task_entrap.gif" width="220"/><br><code>task_entrap.gif</code><br>($N=6$) | <img src="animations/scale15/task_entrap_n15.gif" width="220"/><br><code>task_entrap_n15.gif</code><br>($N=15$) | <img src="animations/scale25/task_entrap_n25.gif" width="220"/><br><code>task_entrap_n25.gif</code><br>($N=25$) | **Radial Spring Standoff**:<br>Synthesized bounded denominator radial springs maintain protective encirclement shell around maneuvering target with adaptive standoff radius ($R=6.5\to 10.0\,\text{m}$). |
 | **Task 3: VORTEX**<br>*(Counter-Rotating Mill)* | <img src="animations/task_vortex.gif" width="220"/><br><code>task_vortex.gif</code><br>($N=12$) | <img src="animations/scale15/task_vortex_n15.gif" width="220"/><br><code>task_vortex_n15.gif</code><br>($N=15$) | <img src="animations/scale25/task_vortex_n25.gif" width="220"/><br><code>task_vortex_n25.gif</code><br>($N=25$) | **Dual-Lobe Angular Momentum**:<br>Non-linear angular momentum coupling spontaneously organizes agents into symmetrical counter-rotating orbits without global anchors or central coordinators. |
 | **Task 4: PACKING**<br>*(Hexagonal Crystal)* | <img src="animations/task_packing.gif" width="220"/><br><code>task_packing.gif</code><br>($N=12$) | <img src="animations/scale15/task_packing_n15.gif" width="220"/><br><code>task_packing_n15.gif</code><br>($N=15$) | <img src="animations/scale25/task_packing_n25.gif" width="220"/><br><code>task_packing_n25.gif</code><br>($N=25$) | **Hexatic Order Parameter $\psi_6$**:<br>Adaptive spatial cutoff ($4.6\,\text{m}$) guides crystallization from 12-node cluster into $5\times 3$ ($N=15$) and $5\times 5$ ($N=25$) defect-free triangular lattices. |
@@ -85,7 +85,7 @@ The table below provides a comprehensive side-by-side visual comparison of champ
 
 ### 1. QUEUE (`task_queue*.gif`)
 - **Objective**: Swarm agents establish and preserve a coherent horizontal line queue while navigating in-trail with uniform spacing.
-- **Lesion Recovery**: Synthesizes an $8\,\text{m}$ local centroid attractive field ($\operatorname{mean}_{j \in \mathcal{N}_i(8)} \Delta \mathbf{p}_{ij}$), achieving **$133.2\%$ relative performance recovery** after deprivation of nearest-neighbor distance and Laplacian terms.
+- **Lesion Recovery**: Synthesizes an $8\,\text{m}$ local centroid attractive field ($\mathrm{mean}_{j \in \mathcal{N}_i(8)} \Delta \mathbf{p}_{ij}$), achieving **$133.2\%$ relative performance recovery** after deprivation of nearest-neighbor distance and Laplacian terms.
 - **Scale Invariance**: Linear formation density scales smoothly from $N=6$ to $N=25$, preserving safe inter-agent headway without string instability.
 
 ### 2. ENTRAP (`task_entrap*.gif`)
@@ -105,7 +105,7 @@ The table below provides a comprehensive side-by-side visual comparison of champ
 
 ### 5. CHAIN (`task_chain*.gif`)
 - **Objective**: Form and maintain a multi-hop dynamic relay network between two arbitrarily moving ground endpoints under a strict local radio communication radius.
-- **Lesion Recovery**: Reconstructs algebraic neighbor velocity consensus ($\mathbf{v}_i + \operatorname{mean}_j(\mathbf{v}_j - \mathbf{v}_i) = \operatorname{mean}_j \mathbf{v}_j$) with exact structural equivalence (**$111.4\%$ recovery**).
+- **Lesion Recovery**: Reconstructs algebraic neighbor velocity consensus ($\mathbf{v}_i + \mathrm{mean}_j(\mathbf{v}_j - \mathbf{v}_i) = \mathrm{mean}_j \mathbf{v}_j$) with exact structural equivalence (**$111.4\%$ recovery**).
 - **Scale Invariance**: Topological predecessor-successor elastic coupling dynamically stretches across moving terminals A and B, maintaining a taut, collision-free relay corridor for $N=6$, $15$, and $25$.
 
 ---
